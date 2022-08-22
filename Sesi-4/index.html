@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+</head>
+  <title>Session 4</title>
+</head>
+<body>
+  <!-- Ruang Keluarga -->
+    <div class="flex justify-center items-center min-h-screen w-full bg-gray-800 gap-12 text-white">
+      <h1>RUANG KELUARGA</h1>
+      <!-- saklar -->
+      <label for="ruang-keluarga-default-toggle" class="inline-flex relative items-center cursor-pointer">
+        <input type="checkbox" id="ruang-keluarga-default-toggle" onchange="saklar('ruang-keluarga', 'ruang-keluarga-default-toggle', 3)" 
+          class="sr-only peer">
+        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 
+          dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full 
+          peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+          after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 
+          after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      </label>
+      <!-- lampu -->
+      <div class="flex flex-row gap-10 items-center" id="ruang-keluarga">
+        <img src="assets/images/off.gif" alt="" id="ruang-keluarga-lamp1">
+        <img src="assets/images/off.gif" alt="" id="ruang-keluarga-lamp2">
+        <img src="assets/images/off.gif" alt="" id="ruang-keluarga-lamp3"> 
+      </div>
+    </div>
+
+  <!-- Ruang Makan -->
+    <div class="flex justify-center items-center min-h-screen w-full bg-gray-800 gap-12 text-white">
+      <h1>RUANG MAKAN</h1>
+      <!-- saklar -->
+      <label for="ruang-makan-default-toggle2" class="inline-flex relative items-center cursor-pointer">
+        <input type="checkbox" value="" id="ruang-makan-default-toggle2" 
+          onchange="saklar('ruang-makan', 'ruang-makan-default-toggle2', 2)" 
+          class="sr-only peer">
+        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 
+          dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full 
+          peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+          after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 
+          after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      </label>
+      <!-- lampu -->
+      <div class="flex flex-row gap-10 items-center" id="ruang-makan">
+        <img src="assets/images/off.gif" alt="" id="ruang-makan-lamp1">
+        <img src="assets/images/off.gif" alt="" id="ruang-makan-lamp2">
+      </div>
+    </div>
+
+  <!-- Kamar Tidur -->
+    <div class="flex justify-center items-center min-h-screen w-full bg-gray-800 gap-12 text-white">
+      <h1>RUANG TIDUR</h1>
+      <label for="kamar-tidur-default-toggle" class="inline-flex relative items-center cursor-pointer">
+        <input type="checkbox" id="kamar-tidur-default-toggle" onchange="saklar('kamar-tidur', 'kamar-tidur-default-toggle', 1)" 
+          class="sr-only peer">
+        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 
+          dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full 
+          peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+          after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 
+          after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      </label>
+      <!-- lampu -->
+      <div class="flex flex-row gap-10 items-center" id="kamar-tidur">
+        <img src="assets/images/off.gif" alt="" id="kamar-tidur-lamp1">
+        
+      </div>
+    </div>
+
+  <!-- Ruang Tamu -->
+    <div class="flex justify-center items-center min-h-screen w-full bg-gray-800 gap-12 text-white">
+      <h1>RUANG TAMU</h1>
+      <label for="ruang-tamu-default-toggle" class="inline-flex relative items-center cursor-pointer">
+        <input type="checkbox" id="ruang-tamu-default-toggle" onchange="saklar('ruang-tamu', 'ruang-tamu-default-toggle', 4)" 
+          class="sr-only peer">
+        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 
+          dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full 
+          peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+          after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 
+          after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      </label>
+      <!-- lampu -->
+      <div class="flex flex-row gap-10 items-center" id="ruang-tamu">
+        <img src="assets/images/off.gif" alt="" id="ruang-tamu-lamp1">
+        <img src="assets/images/off.gif" alt="" id="ruang-tamu-lamp2">
+        <img src="assets/images/off.gif" alt="" id="ruang-tamu-lamp3">
+        <img src="assets/images/off.gif" alt="" id="ruang-tamu-lamp4">       
+      </div>
+    </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
