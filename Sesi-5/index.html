@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Session 5</title>
+</head>
+<body>
+  <div id="root">
+    <div id="login">
+      <h2>Login</h2>
+      <input type="text" placeholder="username" id="usernameInput">
+      <input type="password" placeholder="password" id="passwordInput">
+      <button onclick="onLogin()">Login</button>
+      <br>
+      <button onclick="signUpMenu()">Sign Up!</button>
+      
+    </div>
+
+    <div id="signup">
+      <h1>Sign Up</h1>
+      <input type="text" placeholder="username" id="usernameSign">
+      <input type="password" placeholder="password" id="passwordSign">
+      <input type="password" placeholder="confirm password" id="passwordConfirm">
+      <button onclick="onSignUp()">Sign Up</button>
+      <br>
+      <button onclick="loginMenu()">Login!</button>
+    </div>
+
+    <div id="dashboardAdmin">
+      <p>LOGIN SEBAGAI ADMIN</p>
+      <button onclick="onLogout()">Logout</button>
+    </div>
+    
+    <div id="dashboardUser">
+      <p>LOGIN SEBAGAI USER BIASA</p>
+      <button onclick="onLogout()">Logout</button>
+    </div>
+
+    <div id="signUpSuccess">
+      <h1>Sign Up</h1>
+      <p>Akun Telah Didaftarkan</p>
+      <button onclick="loginMenu()">Login!</button>
+      <button onclick="signUpMenu()">Sign Up!</button>
+    </div>
+  </div>
+
+
+  <script src="logout.js"></script>
+  <script src="login.js"></script>
+  <script src="view.js"></script>
+  <script src="signup.js"></script>
+      
+  <!-- <script>
+    let login = document.getElementById('login')   
+    let signup = document.getElementById('signup')
+    let signUpSuccess = document.getElementById('signUpSuccess')
+    let dashboardAdmin = document.getElementById('dashboardAdmin')
+    let dashboardUser = document.getElementById('dashboardUser')
+    
+    signup.style.display = 'none'
+    signUpSuccess.style.display = 'none'
+    dashboardAdmin.style.display = 'none'
+    dashboardUser.style.display = 'none'
+
+    function onLogin(){
+      const username = localStorage.getItem('username')
+      const password = localStorage.getItem('password')
+
+      const usernameInput = document.getElementById('usernameInput')
+      const passwordInput = document.getElementById('passwordInput')
+      
+      if (usernameInput.value === 'admin' && passwordInput.value === 'admin123') {
+        localStorage.setItem("usernameLogin", "admin")
+        localStorage.setItem("role", 'admin')
+
+        login.style.display = "none"
+        dashboardAdmin.style.display = "block"
+      } else if (username === usernameInput.value && password === passwordInput.value){
+        localStorage.setItem("usernameLogin", usernameInput.value)
+        localStorage.setItem("role", 'basic')
+  
+        login.style.display = "none"
+        dashboardUser.style.display = 'block'
+      } else {
+        alert('Username atau Password tidak valid!')
+      }
+    }
+    
+    if (localStorage.getItem('usernameLogin')) {
+        if (localStorage.getItem('role') === 'admin') {
+          dashboardAdmin.style.display = "block"
+          login.style.display = "none"
+        } else {
+          dashboardUser.style.display = 'block'
+          login.style.display = "none"
+        }
+    }
+
+    function onLogout(){
+      localStorage.removeItem("usernameLogin")
+      localStorage.removeItem("role")
+      location.reload()
+    }
+
+    function onSignUp(){
+      const username = document.getElementById('usernameSign')
+      const password = document.getElementById('passwordSign')
+      const passwordConfirm = document.getElementById('passwordConfirm')
+
+      if (password.value === passwordConfirm.value) {
+        localStorage.setItem("username", username.value)
+        localStorage.setItem("password", password.value)
+        
+        signUpSuccess.style.display = "block"
+        login.style.display = "none"
+        signup.style.display = "none"
+      } else {
+        alert('password tidak valid')
+      }
+    }
+
+    function signUpMenu(){
+      signup.style.display = 'block'
+      login.style.display = 'none'
+      signUpSuccess.style.display = "none"
+    }
+
+    function loginMenu(){
+      signup.style.display = 'none'
+      signUpSuccess.style.display = "none"
+      login.style.display = 'block'
+    }
+  </script> -->
+</body>
+</html>
